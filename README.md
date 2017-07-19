@@ -241,5 +241,34 @@ And you can desctructure them like any other functional langage with head (cell 
 
 eg `[1, 2, 3] == [1 | [2 | [3 | []]]]`
 
+Prepend is constant time:
+```
+iex(1)> list = [1, 2, 3] [1, 2, 3]
+iex(2)> [0 | list ]
+[0, 1, 2, 3]
+You can use the ++ operator to concatenate lists: 
+iex(3)> [0] ++ [1, 2, 3]
+[0, 1, 2, 3]
+```
+
+As mentioned, [] is nil
+
+```
+iex(1)> [ head | tail ] = [:lonely] [:lonely]
+iex(2)> head
+:lonely
+iex(3)> tail []
+```
+
+You can destructure lists as cons cells
+
+```
+iex> [head | tail] = [1, 2, 3] 
+[1, 2, 3]
+iex> head 
+1
+iex> tail 
+[2, 3]
+```
 
 
