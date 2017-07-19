@@ -276,4 +276,36 @@ List.flatten [1, [:two], ["three", []]]
 [1, :two, "three"]
 ```
 
+Of course, we have the `h` command to help see the references:
 
+```
+iex(9)> h List
+
+                                      List
+
+Functions that work on (linked) lists.
+
+Lists in Elixir are specified between square brackets:
+
+    iex> [1, "two", 3, :four]
+    [1, "two", 3, :four]
+
+Two lists can be concatenated and subtracted using the Kernel.++/2 and
+Kernel.--/2 operators:
+
+    iex> [1, 2, 3] ++ [4, 5, 6]
+    [1, 2, 3, 4, 5, 6]
+    iex> [1, true, 2, false, 3, true] -- [true, false]
+    [1, 2, 3, true]
+
+Lists in Elixir are effectively linked lists, which means they are internally
+represented in pairs containing the head and the tail of a list:
+
+    iex> [head | tail] = [1, 2, 3]
+    iex> head
+    1
+    iex> tail
+    [2, 3]
+```
+
+So, use `h` work in the repl, use your usual functional idioms. 
