@@ -1,7 +1,5 @@
 # elixir-fasttrack
-Best way to get up and running is to write shit. This is a tradition for me.
-Built for the scala-minded.
-Really for me alone. It's brutally terse. It's enough to remind myself how things work as I go.
+Best way to get up and running is to write shit down. This is a tradition for me with new languages.
 
 # iex
 The REPL! Like basically every other language that matters, you have a REPL for interacting with the language.
