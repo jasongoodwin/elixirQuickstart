@@ -335,3 +335,54 @@ And somewhat different:
 - actors are processes (inversely, in erlang speak a process is an actor)
 - processes have their own stack frame
 
+# Project Management in Elixir
+
+`mix` is the build tool you'll likely be using
+
+Create a new project:
+
+```
+mix new bossman
+```
+
+Move into it
+
+```
+cd bossman
+```
+
+Test:
+
+```
+mix test
+```
+
+Dependencies are in mix.exs. Standard semver described dependencies.
+
+```
+ defmodule Bossman.Mixfile do
+          use Mix.Project
+          def project do
+  [app: :bossman,
+     version: "0.0.1",
+     elixir: "~> 1.0",
+     deps: deps]
+end
+  def application do
+    [applications: [:logger, :httpoison]]
+  end
+  defp deps do
+    [
+    {:httpoison, "~> 0.9.0"},
+    {:json,      "~> 0.3.0"}
+    ]
+end end
+```
+
+You can see the `defp deps do` section is where you put the dependencies.
+Then the `def applications do` section has the used application dependencies described.
+
+Not sure about test context yet... Todo
+
+`mix` resolves the dependencies
+
