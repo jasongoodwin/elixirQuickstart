@@ -271,4 +271,11 @@ iex> tail
 [2, 3]
 ```
 
+List module has all the usual monadic culprits
+
+```
+List.flatten [1, [:two], ["three", []]]
+[1, :two, "three"]
+```
+
 
