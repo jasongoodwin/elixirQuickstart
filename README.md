@@ -309,3 +309,29 @@ represented in pairs containing the head and the tail of a list:
 ```
 
 So, use `h` work in the repl, use your usual functional idioms. 
+
+# Pipe |>
+
+Like unix pipe, throw a bunch of operations together, throwing the ouput into the next command input.
+
+# Observer
+
+One of the things Brent mentioned was the fact that you can check out the current running state of the VM. This is a big advantage over the JVM where you need to start the VM in a special way to plug in. Typically not a huge issue if you plan ahead, on prem installs have a different quality to them than your traditional platform builds as you own _nothing_.
+
+From `iex` you can call `:observer.start` to get to the GUI. Like Akka, processes have supervision trees so have a gander and inspect other running processes.
+
+# Processes
+
+Processes in Erlang are actors - I know this coming into Elixir from some discussions I've had with people about actor model applications over the years: https://softwareengineering.stackexchange.com/questions/212754/when-is-it-not-good-to-use-actors-in-akka-erlang
+
+Actor model implementation in Akka is based on erlang so it's very similar:
+
+- supervision hierarchy, let it crash mentality
+- location transparency
+- isolation and message passing
+
+And somewhat different:
+
+- actors are processes (inversely, in erlang speak a process is an actor)
+- processes have their own stack frame
+
