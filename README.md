@@ -230,3 +230,16 @@ Typical error reasons:
 
 You can use :file.format_error/1 to get a descriptive string of the error.
 ```
+
+_ is same as scala, haskell, etc.
+
+## Lists
+
+Yep like all functional languages... You guessed it - linked lists!
+
+And you can desctructure them like any other functional langage with head (cell contents) and tail (remainder of the list). Each cell contains either nil ([]) or head and tail ([head | tail])
+
+eg `[1, 2, 3] == [1 | [2 | [3 | []]]]`
+
+
+
