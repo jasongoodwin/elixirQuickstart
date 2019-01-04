@@ -1,5 +1,5 @@
 # elixir-fasttrack
-Best way to get up and running is to write shit down. This is a tradition for me with new languages. Take a book, jot it down, reference it because I know what's here.
+This is a tradition for me with new languages. Take a book, jot it down, reference it because I know what's here.
 
 # iex
 The REPL! Like basically every other language that matters, you have a REPL for interacting with the language.
